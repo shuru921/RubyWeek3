@@ -1,4 +1,4 @@
-package com.example.rubyweek3
+package com.example.mylogintest
 
 import org.junit.Test
 
