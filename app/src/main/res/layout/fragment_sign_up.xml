@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".controller.SignUpFragment">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.mylogintest.viewmodel.SignUpViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvSignUp_s_u"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/txtSignUp_e"
+            android:textColor="@color/purple_700"
+            android:textSize="48sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etAccount_s_u"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="@string/txtAccount"
+            android:inputType="textPersonName"
+            android:text="@={viewModel.uid}"
+            app:layout_constraintEnd_toStartOf="@+id/btVerify_s_u"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSignUp_s_u" />
+
+        <EditText
+            android:id="@+id/etPassword_s_u"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="@string/txtPassword"
+            android:inputType="textPersonName"
+            android:text="@={viewModel.password}"
+            app:layout_constraintEnd_toEndOf="@+id/btVerify_s_u"
+            app:layout_constraintStart_toStartOf="@+id/etAccount_s_u"
+            app:layout_constraintTop_toBottomOf="@+id/etVerify_s_u" />
+
+        <EditText
+            android:id="@+id/etPasswordAgain_s_u"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="@string/txtPasswordAgain"
+            android:inputType="textPersonName"
+            android:text="@={viewModel.passwordAgain}"
+            app:layout_constraintEnd_toEndOf="@+id/etPassword_s_u"
+            app:layout_constraintStart_toStartOf="@+id/etPassword_s_u"
+            app:layout_constraintTop_toBottomOf="@+id/etPassword_s_u" />
+
+        <Button
+            android:id="@+id/btVerify_s_u"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="40dp"
+            android:text="@string/txtVerify"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSignUp_s_u" />
+
+        <Button
+            android:id="@+id/btSignUp_s_u"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/txtSignUp"
+            app:layout_constraintEnd_toEndOf="@+id/tvResult_s_u"
+            app:layout_constraintStart_toStartOf="@+id/tvResult_s_u"
+            app:layout_constraintTop_toBottomOf="@+id/tvResult_s_u" />
+
+        <TextView
+            android:id="@+id/tvResult_s_u"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@={viewModel.result}"
+            app:layout_constraintEnd_toEndOf="@+id/etPasswordAgain_s_u"
+            app:layout_constraintStart_toStartOf="@+id/etPasswordAgain_s_u"
+            app:layout_constraintTop_toBottomOf="@+id/etPasswordAgain_s_u" />
+
+        <EditText
+            android:id="@+id/etVerify_s_u"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="@string/txtVerificationCode"
+            android:inputType="textPersonName"
+            android:text="@={viewModel.verifyCode}"
+            app:layout_constraintEnd_toEndOf="@+id/etAccount_s_u"
+            app:layout_constraintStart_toStartOf="@+id/etAccount_s_u"
+            app:layout_constraintTop_toBottomOf="@+id/etAccount_s_u" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

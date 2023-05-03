@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.mylogintest.viewmodel.LoginViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".controller.LoginFragment">
+
+        <TextView
+            android:id="@+id/tvLogin_l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/txtLogin_e"
+            android:textColor="@color/purple_700"
+            android:textSize="48sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etAccount_l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:ems="10"
+            android:hint="@string/txtAccount"
+            android:inputType="textPersonName"
+            android:text="@={viewModel.uid}"
+            app:layout_constraintEnd_toEndOf="@+id/tvLogin_l"
+            app:layout_constraintStart_toStartOf="@+id/tvLogin_l"
+            app:layout_constraintTop_toBottomOf="@+id/tvLogin_l" />
+
+        <EditText
+            android:id="@+id/etPassword_l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:ems="10"
+            android:hint="@string/txtPassword"
+            android:inputType="textPassword"
+            android:text="@={viewModel.password}"
+            app:layout_constraintEnd_toEndOf="@+id/etAccount_l"
+            app:layout_constraintStart_toStartOf="@+id/etAccount_l"
+            app:layout_constraintTop_toBottomOf="@+id/etAccount_l" />
+
+        <Button
+            android:id="@+id/btLogin_l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/txtLogin_e"
+            app:layout_constraintEnd_toEndOf="@+id/etPassword_l"
+            app:layout_constraintStart_toStartOf="@+id/etPassword_l"
+            app:layout_constraintTop_toBottomOf="@+id/etPassword_l" />
+
+        <Button
+            android:id="@+id/btForgetPassword_l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/txtForgetPassword"
+            app:layout_constraintEnd_toEndOf="@+id/btLogin_l"
+            app:layout_constraintStart_toStartOf="@+id/btLogin_l"
+            app:layout_constraintTop_toBottomOf="@+id/btLogin_l" />
+
+        <TextView
+            android:id="@+id/tvResult_l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="@+id/btForgetPassword_l"
+            app:layout_constraintStart_toStartOf="@+id/btForgetPassword_l"
+            app:layout_constraintTop_toBottomOf="@+id/btForgetPassword_l" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".controller.FirstPersonalInfoFragment">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.mylogintest.viewmodel.FirstPersonalInfoViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvPersonalInfo_f_p_l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtPersonalInfo"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvHello_f_p_l"
+            app:layout_constraintStart_toStartOf="@+id/tvHello_f_p_l"
+            app:layout_constraintTop_toBottomOf="@+id/tvHello_f_p_l" />
+
+        <TextView
+            android:id="@+id/tvHello_f_p_l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/txtHello"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvResult_f_p_l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@{viewModel.user.toString()}"
+            app:layout_constraintEnd_toEndOf="@+id/tvPersonalInfo_f_p_l"
+            app:layout_constraintStart_toStartOf="@+id/tvPersonalInfo_f_p_l"
+            app:layout_constraintTop_toBottomOf="@+id/tvPersonalInfo_f_p_l" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

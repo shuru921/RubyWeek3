@@ -1,3 +1,24 @@
 <resources>
-    <string name="app_name">RubyWeek3</string>
+    <string name="app_name">MyLoginTest</string>
+    <string name="txtSignUp">註冊</string>
+    <string name="txtLogin">登入</string>
+    <string name="txtVerify">寄出驗證</string>
+    <string name="txtSubmit">送出</string>
+    <string name="txtForgetPassword">忘記密碼</string>
+    <string name="txtBagChance">BagChance</string>
+    <string name="txtAccount">請輸入帳號</string>
+    <string name="txtPassword">請輸入密碼</string>
+    <string name="txtPasswordAgain">請再次輸入密碼</string>
+    <string name="txtVerificationCode">請輸入驗證碼</string>
+
+    <string name="errAccountEmpty">帳號不可空白</string>
+    <string name="errPasswordEmpty">密碼不可空白</string>
+    <string name="errVerifyCodeEmpty">驗證碼不可空白</string>
+    <string name="errPasswordAgainFail">確認密碼不正確</string>
+
+    <string name="txtLogin_e">Login</string>
+    <string name="txtForgetPassword_e">Forget Password</string>
+    <string name="txtSignUp_e">Sign Up</string>
+    <string name="txtPersonalInfo">請填寫個人資料</string>
+    <string name="txtHello">Hello</string>
 </resources>
